@@ -15,7 +15,7 @@ con.connect( (err) =>{
 exports.handler = (valores, context, callback) => {
     // allows for using callbacks as finish/error-handlers
     context.callbackWaitsForEmptyEventLoop = false;
-    const sql = "INSERT INTO Reportes VALUES ('"+valores.apertura+"','"+valores.cierre+"','"+valores.venta+"','"+valores.fecha+"')";
+    const sql = "INSERT INTO Reportes VALUES ('10','10','10','10/10/12',1)";
     con.query(sql, (err, res) => {
       if (err) {
         throw err
