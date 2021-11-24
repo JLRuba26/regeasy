@@ -13,9 +13,31 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-		<script>
-
-		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script type='text/javascript'>
+				$(document).ready(function() {
+					$("#btn_cambiar_estado").click(function() {
+						var valores = {
+										apertura = $("#txt_Aper").val(),
+										cierre = $("#txt_Cierre").val(),
+										venta = $("#Venta_T").val(),
+										fecha = $("#Fecha").val(),
+									}
+						$.ajax({
+							jsonp: "callback",
+                    		method: 'POST',
+							url: "mysql.js",
+							data: JSON.stringify(valores),
+							async: false,
+							dataType: "json",
+							contentType : "application/json",
+                   			success: function(respuestaSolicitud) {
+							alert(JSON.stringify(respuestaSolicitud));
+                    		}
+						});
+					});		
+				});
+			</script>  
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -87,7 +109,7 @@
 												</div>
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" value="Registrar" class="primary" /></li>
+														<li><input type="button" name="btn_cambiar_estado" id="btn_cambiar_estado" value="Enviar" /></li>
 														<li><input type="reset" value="Salir" /></li>
 													</ul>
 												</div>
