@@ -12,4 +12,3 @@ con.connect( (err) =>{
     console.log("Funciona")
 })
 
-con.end()
