@@ -15,13 +15,17 @@
 	<body class="is-preload">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 			<script type='text/javascript'>
+				apertura = $("#txt_Aper").val();
+				cierre = $("#txt_Cierre").val();
+				venta = $("#Venta_T").val();
+				fecha = $("#Fecha").val();
 				$(document).ready(function() {
 					$("#btn_cambiar_estado").click(function() {
 						var valores = {
-										apertura = $("#txt_Aper").val(),
-										cierre = $("#txt_Cierre").val(),
-										venta = $("#Venta_T").val(),
-										fecha = $("#Fecha").val(),
+										apertura,
+										cierre,
+										venta,
+										fecha
 									}
 						$.ajax({
 							jsonp: "callback",
