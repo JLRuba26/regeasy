@@ -26,21 +26,23 @@
 										cierre,
 										venta,
 										fecha
-									}
+									};
 						$.ajax({
 							jsonp: "callback",
                     		method: 'POST',
 							url: "https://71k85v4qzj.execute-api.us-east-2.amazonaws.com/PrimerInsertar/",
-							data: JSON.stringify(valores),
+							data: valores,
 							async: false,
 							dataType: "json",
 							contentType : "application/json",
                    			success: function(respuestaSolicitud) {
 							alert(JSON.stringify(respuestaSolicitud));
                     		}
+							
 						});
 					});		
 				});
+				
 			</script>  
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
