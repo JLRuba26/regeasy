@@ -26,15 +26,15 @@ exports.handler = (valores, context, callback) => {
       
   };
 
-  var getData = function(){
+var getData = function(){
     var apertura = document.getElementById("txt_Aper").value;
     var cierre = document.getElementById("txt_Cierre").value;
     var venta = document.getElementById("Venta_T").value;
     var fecha = document.getElementById("Fecha").value;
     MandarDatos(apertura,cierre,venta,fecha);
-  }
+}
 
-  MandarDatos = function(ap,ci,ve,fe){
+MandarDatos = function(ap,ci,ve,fe){
     var valores = {
       apertura = ap,
       cierre = ci,
@@ -53,7 +53,7 @@ exports.handler = (valores, context, callback) => {
         alert(JSON.stringify(respuestaSolicitud));
       }  
     });
-  }
+}
 
 
   
