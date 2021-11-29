@@ -14,41 +14,7 @@
 	</head>
 	<body class="is-preload">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-			<script type='text/javascript'>
-<<<<<<< HEAD
-				const cors = import('cors');
-=======
-				const cors = require('cors');
->>>>>>> parent of 39e1862 (si)
-				apertura = $("#txt_Aper").val();
-				cierre = $("#txt_Cierre").val();
-				venta = $("#Venta_T").val();
-				fecha = $("#Fecha").val();
-				$(document).ready(function() {
-					$("#btn_cambiar_estado").click(function() {
-						var valores = {
-										apertura,
-										cierre,
-										venta,
-										fecha
-									};
-						$.ajax({
-							jsonp: "callback",
-                    		method: 'POST',
-							url: "https://71k85v4qzj.execute-api.us-east-2.amazonaws.com/PrimerInsertar/",
-							data: valores,
-							async: false,
-							dataType: "json",
-							contentType : "application/json",
-                   			success: function(respuestaSolicitud) {
-							alert(JSON.stringify(respuestaSolicitud));
-                    		}
-							
-						});
-					});		
-				}).use(cors());
-				
-			</script>  
+			<script type='text/javascript' src='mysql.js'></script>  
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -120,7 +86,7 @@
 												</div>
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="button" name="btn_cambiar_estado" id="btn_cambiar_estado" value="Enviar" /></li>
+														<li><input type="button" onclick="getData()" name="btn_cambiar_estado" id="btn_cambiar_estado" value="Enviar" /></li>
 														<li><input type="reset" value="Salir" /></li>
 													</ul>
 												</div>
