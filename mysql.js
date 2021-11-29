@@ -27,7 +27,6 @@ exports.handler = (valores, context, callback) => {
   };
 
   var getData = function(){
-    
     var apertura = document.getElementById("txt_Aper").value;
     var cierre = document.getElementById("txt_Cierre").value;
     var venta = document.getElementById("Venta_T").value;

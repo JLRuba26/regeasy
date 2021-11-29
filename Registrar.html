@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="mysql.js"></script>  
 	</head>
 	<body class="is-preload">
 		<!-- Page Wrapper -->
@@ -43,7 +44,7 @@
 
 						<!-- Content -->
 							<div class="wrapper">
-								<script type='text/javascript' src='mysql.js'></script>  
+								
 								<div class="inner">
 									<section>
 										<h3 class="major">Registro de ingresos</h3>
@@ -85,7 +86,7 @@
 												</div>
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="button" onclick="getData()" name="btn_cambiar_estado" id="btn_cambiar_estado" value="Enviar" /></li>
+														<li><button type="button" onclick="getData()">Enviar</button></li>
 														<li><input type="reset" value="Salir" /></li>
 													</ul>
 												</div>
